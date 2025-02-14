@@ -1,0 +1,1 @@
+##Ejercicio 1 (crear una vaiable que determina)
