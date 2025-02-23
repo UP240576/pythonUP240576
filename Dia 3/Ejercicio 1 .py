@@ -45,6 +45,35 @@ circumference = 2*pi*radio
 print("El area de tu circulo es ", areac)
 print("La circunferencia de tu circulo es ", circumference)
 
+##8. Calculate the slope, x-intercept and y-intercept of y = 2x -2
+m = 2
+b = -2 
+slope = -b/m 
+print("Su pendiente es de ", m)
+print("Su intercepcion en x es en ", slope)
+print("Su intercepcion en y es de ", b)
+
+##9. Slope is (m = y2-y1/x2-x1). Find the slope and [Euclidean distance]
+# (https://en.wikipedia.org/wiki/Euclidean_distance#:~:text=In%20mathematics%2C%20the%20Euclidean%20distance,being%20called%20the%20Pythagorean%20distance.) 
+# between point (2, 2) and point (6,10) 
+x1 = 2
+y1 = 2
+x2 = 6
+y2 = 10
+h = ((y1+y2)**2+(x1+x2)**2)**.5
+m1 = (y2-y1)/(x2-x1)
+print("Su intercepcion es en ", m1)
+print("Su distacia es de ", h)
+
+##10. Compare the slopes in tasks 8 and 9.Compare the slopes in tasks 8 and 9.
+difSlopet8 = slope - m1 
+difSlopet9 = m1 - slope 
+print("La diferencia entre la pendiente de la tarea 8 y la tarea 9 es de ", difSlopet8)
+print("La diferencia entre la pendiente de la tarea 9 y la tarea 8 es de ", difSlopet9)
+ 
+
+##11. Calculate the value of y (y = x^2 + 6x + 9).
+#  Try to use different x values and figure out at what x value y is going to be 0.
 
 
 
