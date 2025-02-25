@@ -5,7 +5,7 @@ age = int(input("Ingresa tu edad en numeros "))
 height = float(input("Ingresa tu altura en numeros ")) 
 
 ##3. Declare a variable that store a complex number
-comnum = float(input("Ingresa un numero complejo"))
+comnum = float(input("Ingresa un numero complejo "))
 
 ##4. Ejercicio 1 (crear una vaiable que determina)
 # Escribe un scrip que permita al usuario entregar una base y una altura de un 
@@ -39,7 +39,7 @@ print("El perimetro de tu rectangulo es de ", perimeter)
 ##7. Get radius of a circle using prompt. Calculate the area (area = pi x r x r) 
 # and circumference (c = 2 x pi x r) where pi = 3.14.
 pi = 3.14159
-radio = float(input("Ingresa el radio de tu circulo"))
+radio = float(input("Ingresa el radio de tu circulo "))
 areac = (radio**2)*pi
 circumference = 2*pi*radio
 print("El area de tu circulo es ", areac)
@@ -74,16 +74,57 @@ print("La diferencia entre la pendiente de la tarea 9 y la tarea 8 es de ", difS
 
 ##11. Calculate the value of y (y = x^2 + 6x + 9).
 #  Try to use different x values and figure out at what x value y is going to be 0.
+x = float(input("Coloca un numeor que sea X para obtener Y: "))
+a = 2
+b = 6
+c = 9 
+y = x**a + x*b + c 
+print("Tu valor de Y es: ", y)
 
+##12. Find the length of 'python' and 'dragon' and make a falsy comparison statement.
 
+lenPython =  len("python")
+lenDragon = len("dragon")
+lenngth = lenPython - lenDragon
+print ("La longitud de la palabra python es de: ", lenPython)
+print ("La longitud de la palabra dragon es de: ", lenDragon)
+print ("La diferencia entre la palabra python y dragon es de: ", Length)
 
+##13. Use _and_ operator to check if 'on' is found in both 'python' and 'dragon'.
+onCheck = "on" in "python"
+oninDragon = "on" in "dragon"
+print ("La palabra on se encuentra en ", onCheck, oninDragon)
 
+##14. I hope this course is not full of jargon_. 
+# Use _in_ operator to check if _jargon_ is in the sentence.
+frase = input("Inserta una oracion ")
+if "jargon" in frase: 
+    print ("La palabra jargon se encuentra en su oracion")
+else: 
+    print("La palabra jargon no se encuentra en su oracion")
 
+##15. There is no 'on' in both dragon and python.
 
+chonin = "dragon and python"
+if "on" in chonin:
+    print("La palabra on se encuentra tanto en la palabra python y dragon")
+else:
+    print("La palabra on no se encuentra en python o dragon")
 
+##16. Find the length of the text _python_ and convert the value to float 
+# and convert it to string
 
+longthpy = len("python")
+longthpy = float(longthpy)
+print ("El tipo de la palabra python se enuentra en ", type(longthpy))
+longthpy = str(longthpy)
+print ("El tipo de la palabra python se enuentra en ", type(longthpy))
 
+##17. Even numbers are divisible by 2 and the remainder is zero. 
+# How do you check if a number is even or not using python?
 
+num = float(input("Ingresa un numero "))
+if ((num/2)= )
 
 
 
