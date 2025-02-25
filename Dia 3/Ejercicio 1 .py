@@ -123,10 +123,42 @@ print ("El tipo de la palabra python se enuentra en ", type(longthpy))
 ##17. Even numbers are divisible by 2 and the remainder is zero. 
 # How do you check if a number is even or not using python?
 
-num = float(input("Ingresa un numero "))
-if ((num/2)= )
+num = int(input("Ingresa un numero "))
+div2 = (num % 2)
+if div2 == 0:
+    print("Su numero es par", div2)
+else:
+    print ("Su numero no es par", div2)
+
+##18. Check if the floor division of 7 by 3 is equal to the int converted value of 2.7.
+
+division = 7//3
+div = int(7/3)
+comparation = div == division
+print("Cuantas veces cabe el 3 en el 7: ", division)
+print("Divicion entera de 7 entre 3: ", div)
+print("Son lo mismo los 2 pruebas ", comparation)
+
+##19. Check if type of '10' is equal to type of 10
+
+typeten = "10"
+type10 = int(10)
+same = typeten == type10 
+print(same)
+
+##20. Check if int('9.8') is equal to 10
+
+ch9_8 = int(9.8)
+chec = ch9_8 == 10
+print(chec)
+
+##21. Writ a script that prompts the user to enter 
+# hours and rate per hour. Calculate pay of the person?
 
 
+##22.Write a script that prompts the user to enter number of years. Calculate the 
+# number of seconds a person can live. Assume a person can live hundred years
 
 
+##23. Write a Python script that displays the following table.
 
