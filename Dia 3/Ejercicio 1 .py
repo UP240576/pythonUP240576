@@ -150,15 +150,18 @@ print(same)
 
 ch9_8 = int(9.8)
 chec = ch9_8 == 10
-print(chec)
+print("9.8 y 10 son iguales? ", chec)
 
 ##21. Writ a script that prompts the user to enter 
 # hours and rate per hour. Calculate pay of the person?
+
 
 
 ##22.Write a script that prompts the user to enter number of years. Calculate the 
 # number of seconds a person can live. Assume a person can live hundred years
 
 
+
 ##23. Write a Python script that displays the following table.
+
 
