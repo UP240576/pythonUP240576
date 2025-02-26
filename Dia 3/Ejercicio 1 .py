@@ -152,16 +152,27 @@ ch9_8 = int(9.8)
 chec = ch9_8 == 10
 print("9.8 y 10 son iguales? ", chec)
 
-##21. Writ a script that prompts the user to enter 
+##21. Write a script that prompts the user to enter 
 # hours and rate per hour. Calculate pay of the person?
 
-
+hours = float(input("Ingresa las horas que trabajas: "))
+rate = float(input("Ingresa tu tarifa por hora: "))
+earnings = hours * rate 
+print("Tus ganancias semanales son de: ", earnings)
 
 ##22.Write a script that prompts the user to enter number of years. Calculate the 
-# number of seconds a person can live. Assume a person can live hundred years
+# number of seconds a person can live. Assume a person can live hundred years.
 
-
+yo = float(input("Ingresa tus años vividos: ")) #years old
+secold = yo * 365 * 24 * 3600
+ycl = 100 * 365 * 24 * 3600
+yrest = ycl - secold 
+print("A usted le quedan ", yrest, " segundos de vida")
 
 ##23. Write a Python script that displays the following table.
 
-
+print("  1  1  1  1  1")
+print("  2  1  2  4  8")
+print("  3  1  3  9  27")
+print("  4  1  4  16 64")
+print("  5  1  5  25 125")
