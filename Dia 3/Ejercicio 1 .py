@@ -148,7 +148,7 @@ print(same)
 
 ##20. Check if int('9.8') is equal to 10
 
-ch9_8 = int(9.8)
+ch9_8 = int('9.8')
 chec = ch9_8 == 10
 print("9.8 y 10 son iguales? ", chec)
 
