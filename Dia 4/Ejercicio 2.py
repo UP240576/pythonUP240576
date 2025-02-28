@@ -145,9 +145,11 @@ print(sentence.index('because'))
 ##27.Slice out the phrase 'because because because' in the following sentence: 
 # 'You cannot end a sentence with because because because is a conjunction'
 
-ptr = "because "
-result = sentence.replace(ptr, "")
-print(result)
+ptr = "because because because"
+res = sentence.replace(ptr, "")
+res = ' '.join(res.split())
+
+print(res)
 
 ##28. Does '\'Coding For All' start with a substring _Coding_?
 
