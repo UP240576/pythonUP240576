@@ -179,8 +179,9 @@ print(wonum.isidentifier())
 ##32 The following list contains the names of some of python libraries: 
 # ['Django', 'Flask', 'Bottle', 'Pyramid', 'Falcon']. Join the list with a hash with space string.
 
-pylib = ['Django', 'Flask', 'Bottle', 'Pyramid', 'Falcon']          ##Not Finished YET
-
+pylib = ['Django', 'Flask', 'Bottle', 'Pyramid', 'Falcon']
+res = " ".join(pylib)
+print(pylib)
 
 ##33. Use the new line escape sequence to separate the following sentences.
 #   ```py
@@ -189,8 +190,8 @@ pylib = ['Django', 'Flask', 'Bottle', 'Pyramid', 'Falcon']          ##Not Finish
 #   ```
 
 justnothing = '''py
-I am enjoying this challenge.
-I just wonder that is next.
+    I am enjoying this challenge.
+    I just wonder that is next.
 '''
 print (justnothing)
 
@@ -200,7 +201,11 @@ print (justnothing)
 #   Asabeneh  250     Finland   Helsinki
 #   ```
 
-
+tabscapeuse = '''py
+    Name        Age     Country         City
+    Leonardo    19     Aguascalientes   Ags
+    '''
+print(tabscapeuse)
 
 ##35.  Use the string formatting method to display the following:
 #```sh
@@ -209,7 +214,15 @@ print (justnothing)
 #The area of a circle with radius 10 is 314 meters square.
 #```
 
+ex2 = 2
+rad = 10
+pi = 3.1416
 
+print('''sh
+Radio = {}
+Area = {} * radius ** {}
+The area of a circle with radius {} is {:.2f} meters square
+'''.format(rad, pi, ex2, rad ,pi * rad**2 ))
 
 ##36. Make the following using string formatting methods:
 #```sh
@@ -222,5 +235,13 @@ print (justnothing)
 #8 ** 6 = 262144
 #```
 
+a = 8
+b = 6
 
-
+print('{} + {} = {}'.format(a , b, a + b))
+print('{} - {} = {}'.format(a, b, a - b))
+print('{} * {} = {}'.format(a, b, a * b))
+print('{} / {} = {:.2f}'.format(a, b, a / b)) 
+print('{} % {} = {}'.format(a, b, a % b))
+print('{} // {} = {}'.format(a, b, a // b))
+print('{} ** {} = {}'.format(a, b, a ** b))
