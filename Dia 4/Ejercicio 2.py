@@ -139,31 +139,42 @@ print(beforeBecause, lastBecause)
 ##26. Find the position of the first occurrence of the word 'because' in the following sentence: 
 # 'You cannot end a sentence with because because because is a conjunction'
 
+print("lol")
 print(sentence.index('because'))
 
 ##27.Slice out the phrase 'because because because' in the following sentence: 
 # 'You cannot end a sentence with because because because is a conjunction'
 
-
+ptr = "because "
+result = sentence.replace(ptr, "")
+print(result)
 
 ##28. Does '\'Coding For All' start with a substring _Coding_?
 
-
+cswC = company.startswith("Coding")
+print("Does Coding for all strarts with (Coding)? ", cswC)
 
 ##29. Does 'Coding For All' end with a substring _coding_?
 
-
+cewC = company.endswith("coding")
+print("Does Coding for all ends with (coding)? ", cewC)
 
 ##30.'&nbsp;&nbsp; Coding For All &nbsp;&nbsp;&nbsp; &nbsp;' &nbsp;
-# , remove the left and right trailing spaces in the given string.
+# , remove the left and right trailing spaces in the given string. 
 
-
+string = '&nbsp;&nbsp; Coding For All &nbsp;&nbsp;&nbsp; &nbsp;'
+rep = "&nbsp;"
+trimmed_string = string.strip(rep)                                                      ##NOT FINISHED YET  
+print(f"'{trimmed_string}'")
 
 ##31. Which one of the following variables return True when we use the method isidentifier():
 #   - 30DaysOfPython
 #   - thirty_days_of_python
 
-
+num = "30DaysOfPython"
+wonum = "thirty_days_of_python"
+print(num.isidentifier())
+print(wonum.isidentifier())
 
 ##32 The following list contains the names of some of python libraries: 
 # ['Django', 'Flask', 'Bottle', 'Pyramid', 'Falcon']. Join the list with a hash with space string.
