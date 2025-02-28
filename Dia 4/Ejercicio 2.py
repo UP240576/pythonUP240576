@@ -164,7 +164,7 @@ print("Does Coding for all ends with (coding)? ", cewC)
 
 string = '&nbsp;&nbsp; Coding For All &nbsp;&nbsp;&nbsp; &nbsp;'
 rep = "&nbsp;"
-trimmed_string = string.strip(rep)                                                      ##NOT FINISHED YET  
+trimmed_string = string.replace(rep, "")                                                      
 print(f"'{trimmed_string}'")
 
 ##31. Which one of the following variables return True when we use the method isidentifier():
@@ -179,6 +179,7 @@ print(wonum.isidentifier())
 ##32 The following list contains the names of some of python libraries: 
 # ['Django', 'Flask', 'Bottle', 'Pyramid', 'Falcon']. Join the list with a hash with space string.
 
+pylib = ['Django', 'Flask', 'Bottle', 'Pyramid', 'Falcon']          ##Not Finished YET
 
 
 ##33. Use the new line escape sequence to separate the following sentences.
@@ -187,7 +188,11 @@ print(wonum.isidentifier())
 #   I just wonder what is next.
 #   ```
 
-
+justnothing = '''py
+I am enjoying this challenge.
+I just wonder that is next.
+'''
+print (justnothing)
 
 ##34. Use a tab escape sequence to write the following lines.
 #   ```py
