@@ -105,7 +105,7 @@ repitan strings
 #2. _I am a teacher and I love to inspire and teach people._ How many unique words have been used in the sentence? 
 # Use the split methods and set to get the unique words.
 
-phrace = {'Use', 'the', 'split', 'methods', 'and', 'set', 'to', 'get', 'the', 'unique', 'words'}
+phrace = ['Use', 'the', 'split', 'methods', 'and', 'set', 'to', 'get', 'the', 'unique', 'words']
 print(phrace.symmetric_difference(phrace))
 
 #🎉 CONGRATULATIONS ! 🎉

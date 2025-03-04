@@ -117,6 +117,8 @@ print(it_companies)
 
 ##22. Remove the middle IT company or companies from the list
 
+print('22. Remove the middle IT company or companies from the list')
+
 midcomp = it_companies[3]
 it_companies.remove(midcomp)
 print(it_companies)
