@@ -54,25 +54,40 @@ print(studentdct.get('Skills'))
 
 print('Ejercicio 6')
 
-studentdct.update(['autodidact', 'Smart']:'Skills')
+studentdct['Skills'].extend(['Autodidact', 'Smart'])
 print(studentdct)
 
 ##7. Get the dictionary keys as a list
 
 print('Ejercicio 7')
 
+studntkeys = studentdct.keys()
+print(studntkeys)
+
 ##8. Get the dictionary values as a list
 
 print('Ejercicio 8')
+
+studentvalues = studentdct.values()
+print(studentvalues)
 
 ##9. Change the dictionary to a list of tuples using _items()_ method
 
 print('Ejercicio 9')
 
+studentlist = studentdct.items()
+print(studentlist)
+
 ##10. Delete one of the items in the dictionary
 
 print('Ejercicio 10')
 
+del studentdct['Skills']
+print(studentdct)
+
 ##11. Delete one of the dictionaries
 
 print('Ejercicio 11')
+
+del dogdct
+print(dogdct)

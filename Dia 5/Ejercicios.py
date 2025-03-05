@@ -59,7 +59,7 @@ print(it_companies)
 
 ##11. Add an IT company to it_companies
 
-it_companies.append ('Nvidia')
+it_companies.append('Nvidia')
 print(it_companies)
 
 ##12. Insert an IT company in the middle of the companies list
