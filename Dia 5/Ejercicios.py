@@ -43,14 +43,17 @@ print('La cantidad de compañias en la lista de de: ', len(it_companies))
 
 ##9. Print the first, middle and last company
 
+print('Ejercicio 9 nivel 1')
+
 firstcompany = it_companies[0]
-middlecompany = it_companies[3]
+getmid = len(it_companies)//2
+midcomp = it_companies[getmid]
 lastcompany = it_companies[-1]
 print('''
 Primer compañia de la lista {}
 La compañia de enmedio de la lista {}
 Ultima compañia de la lista {} 
-'''.format(firstcompany, middlecompany, lastcompany))
+'''.format(firstcompany, midcomp, lastcompany))
 
 ##10. Print the list after modifying one of the companies
 
@@ -64,7 +67,7 @@ print(it_companies)
 
 ##12. Insert an IT company in the middle of the companies list
 
-it_companies.insert(3 ,'Intel')
+it_companies.insert(getmid ,'Intel')
 print(it_companies)
 
 ##13. Change one of the it_companies names to uppercase (IBM excluded!)
