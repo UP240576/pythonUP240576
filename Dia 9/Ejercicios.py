@@ -97,6 +97,25 @@ else:
 #    December, January or February, the season is Winter.
 #    March, April or May, the season is Spring
 #    June, July or August, the season is Summer
+
+Autumn = {'September', 'Septiembre', 'October', 'Octubre', 'November', 'Noviembre'}
+Winter = {'Dicember', 'Diciembre', 'January', 'Enero', 'February', 'Febrero'}
+Spring = {'March', 'Marzo', 'April', 'Abril', 'May', 'Mayo'}
+Summer = {'June', 'Junio', 'July', 'Julio', 'Agust', 'Agosto'}
+
+month = input('Ingresa un mes para decirte la estacion del año: ')
+
+if month in Autumn:
+    print('La estacion del año es Otoño')
+elif month in Winter:
+    print('La estacion del año es Invierno')
+elif month in Spring:
+    print('La estacion del año es Primavera')
+elif month in Summer:
+    print('La estacion del año es Verano')
+else:
+    print('Error: el mes que ingreso no es valido por favor ingrese uno empezando con mayuscula y lo demas en minusculas')
+
 #   2. The following list contains some fruits:
 
 #    ```sh
@@ -106,7 +125,19 @@ else:
 #   If a fruit doesn't exist in the list add the fruit to the list and print the modified list. 
 # If the fruit exists print('That fruit already exist in the list')
 
+print('Ejercicio 2 lvl 2')
 
+fruit = input('Ingresa el nombre de una fruta (todo en minusculas): ')
+
+fruits = ['banana', 'orange', 'mango', 'lemon']
+
+print('La lista actual de frutas es: ', fruits)
+
+if fruit in fruits:
+    print('Esta fruta ya esta en la lista')
+else:
+    fruits.append(fruit)
+    print('La lista se a actualizado a: ', fruits)
 
 ### Exercises: Level 3
 
@@ -127,11 +158,71 @@ else:
 #    }
 #```
 
-#     * Check if the person dictionary has skills key, if so print out the middle skill in the skills list.
-#     * Check if the person dictionary has skills key, if so check if the person has 'Python' skill and print out the result.
-#     * If a person skills has only JavaScript and React, print('He is a front end developer'), if the person skills has Node, Python, MongoDB, print('He is a backend developer'), if the person skills has React, Node and MongoDB, Print('He is a fullstack developer'), else print('unknown title') - for more accurate results more conditions can be nested!
-#     * If the person is married and if he lives in Finland, print the information in the following format:
+#   * Check if the person dictionary has skills key, if so print out the middle skill in the skills list.
+#   * Check if the person dictionary has skills key, if so check if the person has 
+#     'Python' skill and print out the result.
+#   * If a person skills has only JavaScript and React, print('He is a front end developer'), 
+#     if the person skills has Node, Python, MongoDB, print('He is a backend developer'), 
+#     if the person skills has React, Node and MongoDB, Print('He is a fullstack developer'), 
+#     else print('unknown title') - for more accurate results more conditions can be nested!
+#   * If the person is married and if he lives in Finland, print the information in the following format:
 
 #```py
 #    Asabeneh Yetayeh lives in Finland. He is married.
 #```
+
+print('Ejercicio 1 nivel 3')
+
+person = {
+    'first_name': 'Asabeneh',
+    'last_name': 'Yetayeh',
+    'age': 250,
+    'country': 'Finland',
+    'is_marred': True,
+    'skills': ['JavaScript', 'React', 'Node', 'MongoDB', 'Python'],
+    'address': {
+        'street': 'Space street',
+        'zipcode': '02210'
+    }
+    }
+
+print(person)
+
+print('problematica 1: Conseguir las keys de enmedio de skills')
+
+midskillskeys = len(person.get('skills'))//2
+
+print('Las habilidades de enmedio son ', person['skills'][midskillskeys])
+
+print('problematica 2: Checar si la persona tiene de habilidad el uso de python')
+
+if 'Python' in person['skills']:
+    print('Si la persona tiene la habilidad de Python en: habilidades: ', person['skills'])
+else:
+    print('La persona no tiene la habilidad de Python en sus habilidades')
+
+print('''Problematica 3: revisar si la persona tiene solo las habilidades de JavaScript y React devolver
+      que la persona es un front end developer, si la persona tiene la hablidad de Node, Python, MongoDB
+      devolver que la persona es un backend developer, 
+      si la persona tiene las habilidades Node and MongoDB devolver es un fullstack developer, 
+      si no devolver unknown title.
+      ''')
+
+frontDev = 'JavaScript' in person['skills'] and 'React' in person['skills']
+backendDev = 'Node,' in person['skills'] and 'Python' in person['skills'] and 'MongoDB' in person['skills']
+fullstackDev = 'React' in person['skills'] and 'Node' in person['skills']  and 'MongoDB' in person['skills']
+
+if frontDev == True and len(person['skills']) == 2 :
+    print("El programador es un (Front end developer)")
+elif backendDev == True and len(person['skills']) == 3:
+    print('El programador es un (Backend developer)')
+elif fullstackDev == True:
+    print('El programador es un (Fullstack developer)')
+else:
+    print('unknown title')
+
+print('''Problematica 4 y ultima: si la persona esta casada y vive en findlandia deolver la informacion en el 
+siguiente orden (Nombre, Apellido, donde vive, y si esta casado)      
+''')
+
+
