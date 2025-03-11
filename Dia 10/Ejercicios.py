@@ -1,0 +1,149 @@
+### Exercises: Level 1
+
+##1. Iterate 0 to 10 using for loop, do the same using while loop.
+
+print('Ejercicio 1 nivel 1: Itera del 0 al 10 usando el bucle for, haz lo mismo usando el bucle while.')
+
+numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+for number in numbers:
+    print(number)
+
+##2. Iterate 10 to 0 using for loop, do the same using while loop.
+
+print('Ejercicio 2 nivel 1: Itera del 0 al 10 usando el bucle for, haz lo mismo usando el bucle while.')
+
+number = 10
+while number > -1:
+    print(number)
+    number = number -1 
+
+##3. Write a loop that makes seven calls to print(), so we get on the output the following triangle:
+#   ```py
+     #
+     ##
+     ###
+     ####
+     #####
+     ######
+     #######
+#   ```
+
+print('''Ejercicio 3 nivel 1: 
+    Escriba un bucle que realice siete llamadas a print(), de modo que obtengamos en la salida el siguiente triángulo:
+      ''')
+
+triangle = '#'
+
+for i in range(8):
+    print(triangle*i)
+    
+
+##4. Use nested loops to create the following:
+
+#   ```sh
+   # # # # # # # #
+   # # # # # # # #
+   # # # # # # # #
+   # # # # # # # #
+   # # # # # # # #
+   # # # # # # # #
+   # # # # # # # #
+   # # # # # # # #
+#   ```
+
+print('''Ejercicio 4 nivel 1:
+    Utilice bucles anidados para crear lo siguiente:
+''')
+
+a = '# '
+for i in range(8):
+    print(a*8)
+
+##5. Print the following pattern:
+#   ```sh
+#   0 x 0 = 0
+#   1 x 1 = 1
+#   2 x 2 = 4
+#   3 x 3 = 9
+#   4 x 4 = 16
+#   5 x 5 = 25
+#   6 x 6 = 36
+#   7 x 7 = 49
+#   8 x 8 = 64
+#   9 x 9 = 81
+#   10 x 10 = 100
+#   ```
+
+print('''Ejercicio 5 nivel 1:
+    Imprime el siguiente patrón
+''')
+
+num = 0
+while num < 11:
+    print('{} x {} = {}'.format(num, num, num * num))
+    num = num + 1
+
+##6. Iterate through the list, ['Python', 'Numpy','Pandas','Django', 'Flask'] using a for loop and print out the items.
+
+print('''Ejercicio 6 nivel 1:
+      Itere a través de la lista, ['Python', 'Numpy', 'Pandas', 'Django', 'Flask']
+       usando un bucle for e imprima los elementos.
+''')
+lenguages = ['Python', 'Numpy','Pandas','Django', 'Flask']
+
+for lenguaje in lenguages:
+    print(lenguaje)
+
+##7. Use for loop to iterate from 0 to 100 and print only even numbers
+
+print('''Ejercicio 7 nivel 1:
+      Utilice el bucle for para iterar de 0 a 100 e imprimir solo números pares.
+''')
+
+num = 0
+evenNumbers = num % 2
+while num < 101:
+    print(num)
+    num = num + 2
+
+##8. Use for loop to iterate from 0 to 100 and print only odd numbers
+
+print('''Ejercicio 8 nivel 1:
+      Utilice el bucle for para iterar de 0 a 100 e imprimir solo números impares
+''')
+
+num = 1
+while num < 101:
+    print(num)
+    num = num + 2
+
+   
+### Exercises: Level 2
+    
+##1.  Use for loop to iterate from 0 to 100 and print the sum of all numbers.
+
+##   ```sh
+#   The sum of all numbers is 5050.
+#   ```
+
+
+
+#1. Use for loop to iterate from 0 to 100 and print the sum of all evens and the sum of all odds.
+
+#    ```sh
+#    The sum of all evens is 2550. And the sum of all odds is 2500.
+#    ```
+
+### Exercises: Level 3
+
+#1. Go to the data folder and use the [countries.py]
+# (https://github.com/Asabeneh/30-Days-Of-Python/blob/master/data/countries.py) file. 
+# Loop through the countries and extract all the countries containing the word _land_.
+
+
+
+#1. This is a fruit list, ['banana', 'orange', 'mango', 'lemon'] reverse the order using loop.
+#2. Go to the data folder and use the [countries_data.py](https://github.com/Asabeneh/30-Days-Of-Python/blob/master/data/countries-data.py) file. 
+ # 1. What are the total number of languages in the data
+ #2. Find the ten most spoken languages from the data
+ #3. Find the 10 most populated countries in the world

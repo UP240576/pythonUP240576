@@ -62,6 +62,8 @@ print(B.intersection(A))
 
 #1. Is A subset of B
 
+print('un set puede ser un set o subset o superset')
+
 print(A.issubset(B))
 
 #1. Are A and B disjoint sets

@@ -221,8 +221,14 @@ elif fullstackDev == True:
 else:
     print('unknown title')
 
-print('''Problematica 4 y ultima: si la persona esta casada y vive en findlandia deolver la informacion en el 
-siguiente orden (Nombre, Apellido, donde vive, y si esta casado)      
+print('''Problematica 4 y ultima:
+Si la persona esta casada y vive en findlandia deolver la informacion en el siguiente orden 
+(Nombre, Apellido, donde vive, y si esta casado)      
 ''')
 
-
+if person['is_marred'] == True and 'Findland' in person['country']:
+    print('''
+     Asabeneh Yetayeh vive en Finland, el es casado
+    ''')
+else:
+    print('Una de las condiciones no coinciden')
