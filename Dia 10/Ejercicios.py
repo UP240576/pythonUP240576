@@ -126,13 +126,27 @@ while num < 101:
 #   The sum of all numbers is 5050.
 #   ```
 
+print('''   Ejercicio 1 nivel 2: 
+        Utilice el bucle for para iterar de 0 a 100 e imprimir la suma de todos los números.
+      ''')
 
+num = 0
+for i in range(101):
+    num = num + i 
+    print(num)
 
-#1. Use for loop to iterate from 0 to 100 and print the sum of all evens and the sum of all odds.
+#2. Use for loop to iterate from 0 to 100 and print the sum of all evens and the sum of all odds.
 
 #    ```sh
 #    The sum of all evens is 2550. And the sum of all odds is 2500.
 #    ```
+
+print('''Ejercicio 2 nivel 2:
+      Utilice el bucle for para iterar de 0 a 100 e imprimir la suma de todos los pares y la suma de todos los impares.
+Parte 1: suma total de numeros pares      
+''')
+
+
 
 ### Exercises: Level 3
 
