@@ -61,3 +61,5 @@ nordicCountries = ('Denmark', 'Finland','Iceland', 'Norway', 'Sweden')
 
 print('Estonia es un pais Nordico? ', 'Estonia' in nordicCountries)
 print('Iceland es un pais Nordico? ', 'Iceland' in nordicCountries)
+#REVISADO
+print("Revisado")

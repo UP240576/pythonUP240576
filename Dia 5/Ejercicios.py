@@ -161,6 +161,10 @@ full_stack = ['Python', 'SQL', 'Redux']
 stack_end = back_and_front_end + full_stack
 print(stack_end)
 
+#REVISADO
+print("Revisado")
+
+
 ### Exercises: Level 2
 
 #1. The following is a list of 10 students ages:
