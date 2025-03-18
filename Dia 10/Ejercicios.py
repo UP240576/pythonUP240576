@@ -142,8 +142,7 @@ for i in range(101):
 #    ```
 
 print('''Ejercicio 2 nivel 2:
-      Utilice el bucle for para iterar de 0 a 100 e imprimir la suma de todos los pares y la suma de todos los impares.
-Parte 1: suma total de numeros pares      
+      Utilice el bucle for para iterar de 0 a 100 e imprimir la suma de todos los pares y la suma de todos los impares.     
 ''')
 
 
