@@ -127,7 +127,8 @@ while num < 101:
 #   ```
 
 print('''   Ejercicio 1 nivel 2: 
-        Utilice el bucle for para iterar de 0 a 100 e imprimir la suma de todos los números.
+        Utilice el bucle for para iterar de 0 a 100 e imprimir la 
+      suma de todos los números.
       ''')
 
 num = 0
@@ -142,7 +143,8 @@ for i in range(101):
 #    ```
 
 print('''Ejercicio 2 nivel 2:
-      Utilice el bucle for para iterar de 0 a 100 e imprimir la suma de todos los pares y la suma de todos los impares.     
+      Utilice el bucle for para iterar de 0 a 100 e imprimir la suma 
+      de todos los pares y la suma de todos los impares.     
 ''')
 
 parnum = []
@@ -181,7 +183,8 @@ for pais in p:
 #2. This is a fruit list, ['banana', 'orange', 'mango', 'lemon'] reverse the order using loop.
 
 print('''Ejercicio 2 nivel 3:
-      Esta es una lista de frutas, ['banana', 'naranja', 'mango', 'limón'] invierte el orden usando un bucle.
+      Esta es una lista de frutas, ['banana', 'naranja', 'mango', 'limón'] 
+      invierte el orden usando un bucle.
 ''')
 
 fruitlist = ['banana', 'orange', 'mango', 'lemon']
@@ -192,7 +195,19 @@ print('Lista de frutas: ', fruitlist)
 for fruit in fruitsortedlist:
     print(fruit)
 
-#3. Go to the data folder and use the [countries_data.py](https://github.com/Asabeneh/30-Days-Of-Python/blob/master/data/countries-data.py) file. 
+#3. Go to the data folder and use the [countries_data.py]
+# (https://github.com/Asabeneh/30-Days-Of-Python/blob/master/data/countries-data.py) file. 
  #3.1. What are the total number of languages in the data
  #3.2. Find the ten most spoken languages from the data
  #3.3. Find the 10 most populated countries in the world
+
+print('''Ejercicio 3 nivel 3:
+''')
+print('Cual es el total de los idiomas en el archivo')
+
+import countriesdata as persons
+
+data = persons
+
+
+print('La cantidades de lenguajes en countriesdata son: ', )
