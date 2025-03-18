@@ -145,7 +145,19 @@ print('''Ejercicio 2 nivel 2:
       Utilice el bucle for para iterar de 0 a 100 e imprimir la suma de todos los pares y la suma de todos los impares.     
 ''')
 
+parnum = []
+impnum = []
 
+for i in range(101):
+    if i % 2 == 0:
+        parnum.append(i)
+    else:
+        impnum.append(i)
+
+print(parnum)
+print('La suma de los numeros pares de 0 a 100 es: {}', sum(parnum))
+print(impnum)
+print('La suma de los numeros impares de 0 a 100 es: {}', sum(impnum))
 
 ### Exercises: Level 3
 
@@ -153,10 +165,34 @@ print('''Ejercicio 2 nivel 2:
 # (https://github.com/Asabeneh/30-Days-Of-Python/blob/master/data/countries.py) file. 
 # Loop through the countries and extract all the countries containing the word _land_.
 
+import countries as paises
 
+print('''Ejercicio 1 nivel 3:
+      Recorra los países y extraiga todos los países que contengan la palabra _land_.
+''')
 
-#1. This is a fruit list, ['banana', 'orange', 'mango', 'lemon'] reverse the order using loop.
-#2. Go to the data folder and use the [countries_data.py](https://github.com/Asabeneh/30-Days-Of-Python/blob/master/data/countries-data.py) file. 
- # 1. What are the total number of languages in the data
- #2. Find the ten most spoken languages from the data
- #3. Find the 10 most populated countries in the world
+p = paises.countries
+land = 'land'
+
+for pais in p:
+    if land in pais:
+        print(pais)
+
+#2. This is a fruit list, ['banana', 'orange', 'mango', 'lemon'] reverse the order using loop.
+
+print('''Ejercicio 2 nivel 3:
+      Esta es una lista de frutas, ['banana', 'naranja', 'mango', 'limón'] invierte el orden usando un bucle.
+''')
+
+fruitlist = ['banana', 'orange', 'mango', 'lemon']
+fruitsortedlist = fruitlist[::-1]
+
+print('Lista de frutas: ', fruitlist)
+
+for fruit in fruitsortedlist:
+    print(fruit)
+
+#3. Go to the data folder and use the [countries_data.py](https://github.com/Asabeneh/30-Days-Of-Python/blob/master/data/countries-data.py) file. 
+ #3.1. What are the total number of languages in the data
+ #3.2. Find the ten most spoken languages from the data
+ #3.3. Find the 10 most populated countries in the world
