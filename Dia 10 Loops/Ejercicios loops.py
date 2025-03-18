@@ -203,10 +203,14 @@ for fruit in fruitsortedlist:
 
 print('''Ejercicio 3 nivel 3:
 ''')
+
 print('Cual es el total de los idiomas en el archivo')
 
+import datosPais as datac 
 
-
-
-
+datos = datac.paises
+countrylanguage = []
+for pais in datos:
+    for lenguaje in pais['languages']:
+        countrylanguage.append()
 print('La cantidades de lenguajes en countriesdata son: ', )
