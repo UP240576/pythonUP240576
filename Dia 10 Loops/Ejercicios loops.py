@@ -205,9 +205,8 @@ print('''Ejercicio 3 nivel 3:
 ''')
 print('Cual es el total de los idiomas en el archivo')
 
-import countriesdata as persons
 
-data = persons
+
 
 
 print('La cantidades de lenguajes en countriesdata son: ', )
