@@ -214,8 +214,22 @@ for pais in datos:
     for lenguaje in pais['languages']:
         countrylanguage.append(lenguaje)
         
-print('La cantidades de lenguajes en countriesdata son: ', )
-print(len(countrylanguage))
+print('La cantidades de lenguajes en countriesdata son: ', len(countrylanguage))
 
 print('3.2 Encuentra el idioma mas hablado')
 
+setlanguages = set(countrylanguage)
+dictlanguages = {
+
+}
+for language in setlanguages:
+    dictlanguages[language] = 0
+
+print(dictlanguages)
+
+for idioma in dictlanguages:
+    for pais in datos:  
+         if idioma in pais['languages']:
+             dictlanguages[idioma] = pais['population'] + dictlanguages[idioma]
+
+print(dictlanguages)

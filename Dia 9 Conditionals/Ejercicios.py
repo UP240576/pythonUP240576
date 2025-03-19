@@ -226,7 +226,7 @@ Si la persona esta casada y vive en findlandia deolver la informacion en el sigu
 (Nombre, Apellido, donde vive, y si esta casado)      
 ''')
 
-if person['is_marred'] == True and 'Findland' in person['country']:
+if person['is_marred'] == True and 'Finland' in person['country']:
     print('''
      Asabeneh Yetayeh vive en Finland, el es casado
     ''')
