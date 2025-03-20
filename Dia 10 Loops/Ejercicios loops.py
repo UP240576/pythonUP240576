@@ -232,4 +232,14 @@ for idioma in dictlanguages:
          if idioma in pais['languages']:
              dictlanguages[idioma] = pais['population'] + dictlanguages[idioma]
 
-print(dictlanguages)
+sortValuesLanguagespopulation = sorted(dictlanguages.values(), reverse= True)
+sorfkeyslanguagespopulation = sorted(dictlanguages, key= dictlanguages.get, reverse=True)
+
+print( sorfkeyslanguagespopulation[1] ,sortValuesLanguagespopulation[1])
+
+print('''Ejercicio 3.3 nivel 3:
+      Encuentra los 10 idiomas mas populares en el mundo
+''')
+print('Los 10 idiomas mas hablados en el mundo son (orden decendente)')
+for i in range(10):
+    print(sorfkeyslanguagespopulation[i] ,sortValuesLanguagespopulation[i])
