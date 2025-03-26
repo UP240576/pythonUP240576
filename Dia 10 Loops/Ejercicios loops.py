@@ -157,9 +157,9 @@ for i in range(101):
         impnum.append(i)
 
 print(parnum)
-print('La suma de los numeros pares de 0 a 100 es: {}', sum(parnum))
+print('La suma de los numeros pares de 0 a 100 es: ', sum(parnum))
 print(impnum)
-print('La suma de los numeros impares de 0 a 100 es: {}', sum(impnum))
+print('La suma de los numeros impares de 0 a 100 es: ', sum(impnum))
 
 ### Exercises: Level 3
 
