@@ -6,8 +6,8 @@ print('''Ejercicio 1 nivel 1:
 ''')
 
 def addTwoNumbers():
-    frstNum = float(input('ingresa un numero'))
-    scndNum = 8
+    frstNum = float(input('Ingresa un primer numero: '))
+    scndNum = float(input('Ingresa un segundo numero: '))
     sum = frstNum + scndNum
     return 'La suma es', sum
 print(addTwoNumbers())
@@ -19,8 +19,8 @@ print('''Ejercicio 2 nivel 1:
     Escribe una funcion que calcule el area de un circulo
 ''')
 
-def areaDeUnCirculo ():
-    r = 10
+def areaDeUnCirculo():
+    r = float(input('Ingresa el Radio de tu circulo: '))
     pi = 3.1416
     area = pi * r * r
     return 'El area de un circulo es: ', area
@@ -30,44 +30,79 @@ print(areaDeUnCirculo())
 # Check if all the list items are number types. If not do give a reasonable feedback.
 
 print('''Ejercicio 3 nivel 1:
-      Escribe una funcion qque se llame add_all_nums que tome numeros 
+      Escriba una función llamada add_all_nums que tome un número arbitrario de argumentos y los sume todos.
+      Compruebe si todos los elementos de la lista son de tipo numérico. De no ser así, proporcione una respuesta razonable.
 ''')
 
-
+                                                                                                                                            ##Aun no terminado
 
 ##4. Temperature in °C can be converted to °F using this formula: °F = (°C x 9/5) + 32. 
 # Write a function which converts °C to °F, _convert_celsius_to-fahrenheit_.
 
 print('''Ejercicio 4 nivel 1:
-      
+      La temperatura en °C se puede convertir a °F usando esta fórmula: °F = (°C x 9/5) + 32. 
+      Escriba una función que convierta °C a °F, _convert_celsius_to-fahrenheit_.
 ''')
 
-
+def conv_C_to_F():
+    C = float(input('Ingresa la temperatura que quieres convertir de Celsius a Fahrenheint: '))
+    F = (C*9/5) + 32
+    return 'En Fahrenheint son', F
+print(conv_C_to_F())
 
 ##5. Write a function called check-season, it takes a month parameter and returns the season:
 #  Autumn, Winter, Spring or Summer.
 
 print('''Ejercicio 5 nivel 1:
-      
+      Escriba una función llamada check-season, toma un parámetro de mes y devuelve la temporada: Otoño, Invierno, Primavera o Verano.
 ''')
 
-
+def check_season():
+    Autumn = {'September', 'Septiembre', 'October', 'Octubre', 'November', 'Noviembre'}
+    Winter = {'Dicember', 'Diciembre', 'January', 'Enero', 'February', 'Febrero'}
+    Spring = {'March', 'Marzo', 'April', 'Abril', 'May', 'Mayo'}
+    Summer = {'June', 'Junio', 'July', 'Julio', 'Agust', 'Agosto'}
+    
+    month = input('Ingresa un mes para decirte la estacion del año: ')
+    
+    if month in Autumn:
+        print('La estacion del año es Otoño')
+    elif month in Winter:
+        print('La estacion del año es Invierno')
+    elif month in Spring:
+        print('La estacion del año es Primavera')
+    elif month in Summer:
+        print('La estacion del año es Verano')
+    else:
+        print('Error: el mes que ingreso no es valido por favor ingrese uno empezando con mayuscula y lo demas en minusculas')
+        return
+print(check_season())
 
 ##6. Write a function called calculate_slope which return the slope of a linear equation
 
 print('''Ejercicio 6 nivel 1:
-      
+      Escriba una función llamada calculate_slope que devuelva la pendiente de una ecuación lineal.
 ''')
 
+def calculate_slope():
+    x1 = float(input('Ingresa el dato x1 de la pendiente que deseas calcular: '))
+    y1 = float(input('Ingresa el dato y1 de la pendiente que deseas calcular: '))
+    x2 = float(input('Ingresa el dato x2 de la pendiente que deseas calcular: '))
+    y2 = float(input('Ingresa el dato y2 de la pendiente que deseas calcular: '))
+    M = (y2 - y1)/(x2 - x1)
+    return 'La pendiente es de: ', M
 
+print(calculate_slope())
 
 ##7. Quadratic equation is calculated as follows: ax² + bx + c = 0. 
 # Write a function which calculates solution set of a quadratic equation, _solve_quadratic_eqn_.
 
 print('''Ejercicio 7 nivel 1:
-      
+      La ecuación cuadrática se calcula de la siguiente manera: ax² + bx + c = 0. 
+      Escriba una función que calcule el conjunto solución de una ecuación cuadrática, _solve_quadratic_eqn_.
 ''')
 
+def solve_quadratic_eqn():
 
 
 ##8. Declare a function named print_list. 
