@@ -34,7 +34,18 @@ print('''Ejercicio 3 nivel 1:
       Compruebe si todos los elementos de la lista son de tipo numérico. De no ser así, proporcione una respuesta razonable.
 ''')
 
-                                                                                                                                            ##Aun no terminado
+def add_all_nums():
+    randomNum = input('Introduce un numero del tipo que tu quieras: ')
+    if "." in randomNum:
+        randomNum = float(randomNum)
+        print (f"El tipo de numero '{randomNum}' que ingresaste es: '{type(randomNum)}'")
+    elif "." in randomNum == False:
+        randomNum = int(randomNum)
+        print (f"El tipo de numero '{randomNum}' que ingresaste es: '{type(randomNum)}'")
+    else:
+        print(f"Error el numero '{randomNum}' no es valido.")
+        
+add_all_nums()
 
 ##4. Temperature in °C can be converted to °F using this formula: °F = (°C x 9/5) + 32. 
 # Write a function which converts °C to °F, _convert_celsius_to-fahrenheit_.
@@ -104,6 +115,14 @@ print('''Ejercicio 7 nivel 1:
 
 def solve_quadratic_eqn():
 
+    A = float(input('Ingresa el numero A de tu ecuación cuadratica: '))
+    B = float(input('Ingresa el numero B de tu ecuación cuadratica: '))
+    C = float(input('Ingresa el numero C de tu ecuación cuadratica: '))
+    x1 = (-B/2*A) 
+    x2 = ((B**2 - 4*A*C)**.5)/(2*A)
+    return f"El valor de x es igual a {x1} +- {x2}"
+
+print(solve_quadratic_eqn())
 
 ##8. Declare a function named print_list. 
 # It takes a list as a parameter and it prints out each element of the list.
