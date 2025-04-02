@@ -10,7 +10,6 @@ def addTwoNumbers():
     scndNum = float(input('Ingresa un segundo numero: '))
     sum = frstNum + scndNum
     return 'La suma es', sum
-print(addTwoNumbers())
 
 ##2. Area of a circle is calculated as follows: area = π x r x r. 
 # Write a function that calculates _area_of_circle_.
@@ -24,7 +23,6 @@ def areaDeUnCirculo():
     pi = 3.1416
     area = pi * r * r
     return 'El area de un circulo es: ', area
-print(areaDeUnCirculo())
 
 ##3. Write a function called add_all_nums which takes arbitrary number of arguments and sums all the arguments. 
 # Check if all the list items are number types. If not do give a reasonable feedback.
@@ -44,8 +42,7 @@ def add_all_nums():
         print (f"El tipo de numero '{randomNum}' que ingresaste es: '{type(randomNum)}'")
     else:
         print(f"Error el numero '{randomNum}' no es valido.")
-        
-add_all_nums()
+    return ""
 
 ##4. Temperature in °C can be converted to °F using this formula: °F = (°C x 9/5) + 32. 
 # Write a function which converts °C to °F, _convert_celsius_to-fahrenheit_.
@@ -59,7 +56,6 @@ def conv_C_to_F():
     C = float(input('Ingresa la temperatura que quieres convertir de Celsius a Fahrenheint: '))
     F = (C*9/5) + 32
     return 'En Fahrenheint son', F
-print(conv_C_to_F())
 
 ##5. Write a function called check-season, it takes a month parameter and returns the season:
 #  Autumn, Winter, Spring or Summer.
@@ -86,8 +82,7 @@ def check_season():
         print('La estacion del año es Verano')
     else:
         print('Error: el mes que ingreso no es valido por favor ingrese uno empezando con mayuscula y lo demas en minusculas')
-        return
-print(check_season())
+        return""
 
 ##6. Write a function called calculate_slope which return the slope of a linear equation
 
@@ -102,8 +97,6 @@ def calculate_slope():
     y2 = float(input('Ingresa el dato y2 de la pendiente que deseas calcular: '))
     M = (y2 - y1)/(x2 - x1)
     return 'La pendiente es de: ', M
-
-print(calculate_slope())
 
 ##7. Quadratic equation is calculated as follows: ax² + bx + c = 0. 
 # Write a function which calculates solution set of a quadratic equation, _solve_quadratic_eqn_.
@@ -122,8 +115,6 @@ def solve_quadratic_eqn():
     x2 = ((B**2 - 4*A*C)**.5)/(2*A)
     return f"El valor de x es igual a {x1} +- {x2}"
 
-print(solve_quadratic_eqn())
-
 ##8. Declare a function named print_list. 
 # It takes a list as a parameter and it prints out each element of the list.
 
@@ -134,7 +125,7 @@ print('''Ejercicio 8 nivel 1:
 
 def print_list():
     it_companies = ['Facebook', 'Google', 'Microsoft', 'Apple', 'IBM', 'Oracle', 'Amazon']
-    return it_companies
+    return ""
 
 ##9. Declare a function named reverse_list. 
 # It takes an array as a parameter and it returns the reverse of the array (use loops).
@@ -151,11 +142,11 @@ print('''Ejercicio 9 nivel 1:
       Esta función toma una matriz como parámetro y devuelve su valor inverso (usando bucles).
 ''')
 
-def reverse_list():
+def reverse_list(*elemento):
     list_whatever = []
-    for n in list_whatever:
-        list_whatever.insert(0,n)
-        return""
+    for n in elemento[::-1]:
+        list_whatever.append(n)
+    return list_whatever
 
 ##10. Declare a function named capitalize_list_items. 
 # It takes a list as a parameter and it returns a capitalized list of items
@@ -166,7 +157,10 @@ print('''Ejercicio 10 nivel 1:
 ''')
 
 def capitalize_list_items():
-    
+    phrase = input('Ingresa una frase que quieras que pase sus letras a mayusculas: ')
+    phrase = str(phrase)
+    print(phrase.upper())
+    return""
 
 ##11. Declare a function named add_item. It takes a list and an item parameters. 
 # It returns a list with the item added at the end.
@@ -179,10 +173,16 @@ def capitalize_list_items():
 #```
 
 print('''Ejercicio 11 nivel 1:
-      
+      Declara una función llamada add_item. Esta toma como parámetros una lista y un elemento.
+      Devuelve una lista con el elemento añadido al final.
 ''')
 
-
+def add_item():
+    item_list = []
+    itemToAdd = str(input("Ingresa un elemento para agregar a la lista: "))
+    item_list.append(itemToAdd)
+    print(item_list)
+    return""
 
 ##12. Declare a function named remove_item. It takes a list and an item parameters. 
 # It returns a list with the item removed from it.
@@ -210,24 +210,59 @@ print('''Ejercicio 12 nivel 1:
 #```
 
 print('''Ejercicio 13 nivel 1:
-      
+      Declara una función llamada suma_de_números. 
+      Esta función toma un parámetro numérico y suma todos los números en ese rango.
 ''')
 
-
+def sumOfNumbers(rang):
+    rang = int(rang)
+    num = 0
+    for i in range(rang):
+        num = num + i 
+        print(num)
+    return ""
 
 ##14. Declare a function named sum_of_odds. 
 # It takes a number parameter and it adds all the odd numbers in that range.
 
 print('''Ejercicio 14 nivel 1:
-      
+      Declare una función llamada suma_de_impares. 
+      Esta función toma un parámetro numérico y suma todos los números impares en ese rango.
 ''')
+
+def sumOfOdds(rang):
+    parnum = []
+    impnum = []
+    for i in range(rang):
+        if i % 2 == 0:
+            parnum.append(i)
+        else:
+            impnum.append(i)
+    
+    return f"La suma de los numeros impares del 1 al {rang} es igual a ", sum(impnum)
+
+print(sumOfOdds(50))
 
 ##15. Declare a function named sum_of_even. 
 #It takes a number parameter and it adds all the even numbers in that - range.
 
 print('''Ejercicio 15 nivel 1:
-      
+      Declare una función llamada suma_de_pares. 
+      Esta función toma un parámetro numérico y suma todos los números pares en ese rango.
 ''')
+
+def sumOfeven(rang):
+    parnum = []
+    impnum = []
+    for i in range(rang):
+        if i % 2 == 0:
+            parnum.append(i)
+        else:
+            impnum.append(i)
+    
+    return f"La suma de los numeros pares del 1 al {rang} es igual a ", sum(parnum)
+
+print(sumOfeven(50))
 
 ### Exercises: Level 2
 
@@ -241,10 +276,22 @@ print('''Ejercicio 15 nivel 1:
 #```
 
 print('''Ejercicio 1 nivel 2:
-      
+      Declare una función llamada evens_and_odds. 
+      Esta función toma un entero positivo como parámetro y cuenta el número de pares e impares en el número.
 ''')
 
+def evenAndOdds():
+    parnum = []
+    impnum = []
+    for i in range(rang):
+        if i % 2 == 0:
+            parnum.append(i)
+        else:
+            impnum.append(i)
+    
+    return f"La suma de los numeros pares e imppares del 1 al {rang} es igual a numeros pares {len(parnum)} y numeros impares {len(impnum)}"
 
+print(evenAndOdds(100))
 
 ##2. Call your function factorial, 
 # it takes a whole number as a parameter and it return a factorial of the number
