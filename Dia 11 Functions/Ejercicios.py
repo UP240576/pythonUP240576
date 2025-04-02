@@ -128,10 +128,13 @@ print(solve_quadratic_eqn())
 # It takes a list as a parameter and it prints out each element of the list.
 
 print('''Ejercicio 8 nivel 1:
-      
+      Declare una función llamada print_list. 
+      Esta función toma una lista como parámetro e imprime cada elemento de la lista.
 ''')
 
-
+def print_list():
+    it_companies = ['Facebook', 'Google', 'Microsoft', 'Apple', 'IBM', 'Oracle', 'Amazon']
+    return it_companies
 
 ##9. Declare a function named reverse_list. 
 # It takes an array as a parameter and it returns the reverse of the array (use loops).
@@ -144,19 +147,26 @@ print('''Ejercicio 8 nivel 1:
 #```
 
 print('''Ejercicio 9 nivel 1:
-      
+      Declare una función llamada reverse_list. 
+      Esta función toma una matriz como parámetro y devuelve su valor inverso (usando bucles).
 ''')
 
-
+def reverse_list():
+    list_whatever = []
+    for n in list_whatever:
+        list_whatever.insert(0,n)
+        return""
 
 ##10. Declare a function named capitalize_list_items. 
 # It takes a list as a parameter and it returns a capitalized list of items
 
 print('''Ejercicio 10 nivel 1:
-       
+      Declare una función llamada capitalize_list_items. 
+      Esta toma una lista como parámetro y devuelve una lista de elementos en mayúsculas.
 ''')
 
-
+def capitalize_list_items():
+    
 
 ##11. Declare a function named add_item. It takes a list and an item parameters. 
 # It returns a list with the item added at the end.
