@@ -124,8 +124,10 @@ print('''Ejercicio 8 nivel 1:
 ''')
 
 def print_list():
-    it_companies = ['Facebook', 'Google', 'Microsoft', 'Apple', 'IBM', 'Oracle', 'Amazon']
+    it_companies = ['Facebook', 'Google', 'Microsoft', 'Apple', 'IBM', 'Oracle', 'Amazon']   
     return ""
+
+print(print_list())
 
 ##9. Declare a function named reverse_list. 
 # It takes an array as a parameter and it returns the reverse of the array (use loops).
@@ -219,13 +221,15 @@ print('''Ejercicio 13 nivel 1:
       Esta función toma un parámetro numérico y suma todos los números en ese rango.
 ''')
 
-def sumOfNumbers(rang):
-    rang = int(rang)
+def sumOfNumbers():
+    rang = int(input("Introduce un numero para hacer la suma de sus numeros en su rango: "))
     num = 0
-    for i in range(rang):
-        num = num + i 
-        print(num)
+    for i in range(rang+1):
+        num += i 
+    print(f"El numero que usted introdujo fue ({rang}) y su forma factorial es: {num}")
     return ""
+
+print(sumOfNumbers())
 
 ##14. Declare a function named sum_of_odds. 
 # It takes a number parameter and it adds all the odd numbers in that range.
@@ -327,17 +331,63 @@ print('''Ejercicio 3 nivel 2:
       toma un parámetro y verifica si está vacío o no
 ''')
 
-
+def is_empty(nposibleEmpty):
+    if nposibleEmpty == "":
+        print('La variable que usted ingreso esta vacio')
+    else:
+        print('Usted no ingreso ningun numero vacio')
+    return
 
 ##4. Write different functions which take lists. 
 # They should calculate_mean, calculate_median, calculate_mode, calculate_range, 
 # calculate_variance, calculate_std (standard deviation).
 
 print('''Ejercicio 4 nivel 2:
-      
+      Escriba diferentes funciones que acepten listas. 
+      Estas funciones deben calcular la media, la mediana, 
+      la moda, el rango, la varianza y la desviación estándar (desviación estándar).
 ''')
 
+lst = []
+for i in range(10):
+    nwitem = float(input(f"Introduce un numero como item numero {i} para agregarlo a la lista, (se pueden repetir numeros)"))
+    lst.append(nwitem)
 
+def calculate_mean(lst):
+    mean = sum(lst)/(len(lst))
+    print(f"La media de la lista es {mean}")
+    return""
+
+def calculate_median(lst):
+    lst.sort
+    midlst = (len(lst)//2)
+    print(lst[midlst])
+    return""
+
+def calculate_mode():
+    stlst = set(lst)
+    dict2 = {
+
+    }
+    for num in stlst:
+        dict2[num] = 1
+    for num in dict2:
+        for numero in lst:
+            if numero == num:
+                dict2[num] = num + 1
+    
+    sortvaluesinlst = sorted(dict2.values(), reverse = True)
+    sortkeysinlst = sorted(dict2, key= dict2.get, reverse= True)
+    print(f"La moda de la lista es {sortvaluesinlst[0]} que se repite una cantidad de {sortkeysinlst[0]}")
+    return""
+
+def calculate_range():
+    srtdlst = sorted(lst)
+    gtrange = srtdlst[0] - srtdlst[-1]
+    print(f"El rango de la lista es de {gtrange} empezando de {srtdlst[0]} llegando hasta {srtdlst[-1]}")
+    return""
+
+print(calculate_mean, calculate_median, calculate_mode, calculate_range)
 
 ### Exercises: Level 3
 
