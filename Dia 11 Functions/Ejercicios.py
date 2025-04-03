@@ -195,10 +195,15 @@ def add_item():
 #```
 
 print('''Ejercicio 12 nivel 1:
-      
+      Declara una función llamada remove_item. 
+      Esta toma como parámetros una lista y un elemento. Devuelve una lista con el elemento eliminado.
 ''')
 
+food_staff = ['Potato', 'Tomato', 'Mango', 'Milk']
 
+def removeItem(itemToRemove):
+    food_staff.remove(itemToRemove)
+    return""
 
 ##13. Declare a function named sum_of_numbers. 
 # It takes a number parameter and it adds all the numbers in that range.
@@ -241,7 +246,7 @@ def sumOfOdds(rang):
     
     return f"La suma de los numeros impares del 1 al {rang} es igual a ", sum(impnum)
 
-print(sumOfOdds(50))
+
 
 ##15. Declare a function named sum_of_even. 
 #It takes a number parameter and it adds all the even numbers in that - range.
@@ -280,7 +285,7 @@ print('''Ejercicio 1 nivel 2:
       Esta función toma un entero positivo como parámetro y cuenta el número de pares e impares en el número.
 ''')
 
-def evenAndOdds():
+def evenAndOdds(rang):
     parnum = []
     impnum = []
     for i in range(rang):
@@ -297,16 +302,29 @@ print(evenAndOdds(100))
 # it takes a whole number as a parameter and it return a factorial of the number
 
 print('''Ejercicio 2 nivel 2:
-      
+      Llama a tu función factorial, 
+      toma un número entero como parámetro y devuelve un factorial del número.
 ''')
 
+def factorial(f):
+    
+    f = int(f)
+    if f <0:
+        return "Es imposible debido a que el numero ingresado es 0 o es menor"
+    result = 1
+    for i in range(1, f + 1):
+        result *= i 
+    return result
 
+numero = float(input("Ingroduce un numero que quieras convertir a factorial: "))
+print(f"El factorial de {numero} es {factorial(numero)}")
 
 ##3. Call your function _is_empty_, 
 # it takes a parameter and it checks if it is empty or not
 
 print('''Ejercicio 3 nivel 2:
-      
+      Llama a tu función _is_empty_, 
+      toma un parámetro y verifica si está vacío o no
 ''')
 
 
