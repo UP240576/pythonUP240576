@@ -232,3 +232,4 @@ if person['is_marred'] == True and 'Finland' in person['country']:
     ''')
 else:
     print('Una de las condiciones no coinciden')
+print("revisado")
