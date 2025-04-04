@@ -349,8 +349,8 @@ print('''Ejercicio 4 nivel 2:
 ''')
 
 lst = []
-for i in range(10):
-    nwitem = float(input(f"Introduce un numero como item numero {i} para agregarlo a la lista, (se pueden repetir numeros)"))
+for i in range(3):
+    nwitem = float(input(f"Introduce un numero como item numero {i+1} para agregarlo a la lista, (se pueden repetir numeros): "))
     lst.append(nwitem)
 
 def calculate_mean(lst):
@@ -364,64 +364,127 @@ def calculate_median(lst):
     print(lst[midlst])
     return""
 
-def calculate_mode():
-    stlst = set(lst)
-    dict2 = {
-
-    }
-    for num in stlst:
-        dict2[num] = 1
-    for num in dict2:
-        for numero in lst:
-            if numero == num:
-                dict2[num] = num + 1
+def calculate_mode(lst):
+    frequency = {}
+    for num in lst:
+        if num in frequency:
+            frequency[num] += 1
+        else:
+            frequency[num] = 1
+    max_frequency = max(frequency.values())
+    modes = [num for num, count in frequency.items() if count == max_frequency]
     
-    sortvaluesinlst = sorted(dict2.values(), reverse = True)
-    sortkeysinlst = sorted(dict2, key= dict2.get, reverse= True)
-    print(f"La moda de la lista es {sortvaluesinlst[0]} que se repite una cantidad de {sortkeysinlst[0]}")
+    if len(modes) == 1:
+        print(f"La moda de la lista es {modes[0]} que se repite {max_frequency} veces")
+    else:
+        print(f"Hay múltiples modas: {', '.join(map(str, modes))} que se repiten {max_frequency} veces")
+    
     return""
+
+calculate_mode(lst)
 
 def calculate_range():
     srtdlst = sorted(lst)
-    gtrange = srtdlst[0] - srtdlst[-1]
+    gtrange = srtdlst[-1] - srtdlst[0]
     print(f"El rango de la lista es de {gtrange} empezando de {srtdlst[0]} llegando hasta {srtdlst[-1]}")
     return""
 
-print(calculate_mean, calculate_median, calculate_mode, calculate_range)
+print(calculate_mean(lst))
+print(calculate_median(lst))
+print(calculate_mode(lst))
+print(calculate_range())
 
 ### Exercises: Level 3
 
 ##1. Write a function called is_prime, which checks if a number is prime.
 
 print('''Ejercicio 1 nivel 3:
-      
+      Escriba una función llamada is_prime, que verifique si un número es primo.
 ''')
 
+def is_prime(n):
+    if n <= 1:
+        return False
+    if n <= 3:
+        return True
+    if n % 2 == 0 or n % 3 == 0:
+        return False
+    
+    i = 5
+    w = 2
+    while i * i <= n:
+        if n % i == 0:
+            return False
+        i += w
+        w = 6 - w
+    return True
 
+n = float(input('Ingresa un numero y te digo si es primo o no: '))
+print(is_prime(n))
 
 ##2. Write a functions which checks if all items are unique in the list.
 
 print('''Ejercicio 2 nivel 3:
-      
+      Escriba una función que verifique si todos los elementos son únicos en la lista.
 ''')
 
+def allItemsUniqueinlst(lst):
+    """Verifica si todos los elementos en una lista son únicos"""
+    stlst = set(lst)
+    allunique = len(lst) == len(stlst)
+    
+    if allunique:
+        print("Todos los elementos de la lista son únicos")
+    else:
+        print("La lista contiene elementos repetidos")
+    
+    return allunique 
 
+
+lst = []
+for i in range(5):  
+    nwitem = input(f"Introduce un nuevo item número {i+1}: ")
+    lst.append(nwitem)  
+
+resultado = allItemsUniqueinlst(lst)
+print(f"Resultado booleano: {resultado}")
 
 ##3. Write a function which checks if all the items of the list are of the same data type.
 
 print('''Ejercicio 3 nivel 3:
-      
+      Escriba una función que verifique si todos los elementos de la lista son del mismo tipo de datos
 ''')
 
+def todos_mismo_tipo(lista):
+    if not lista:  
+        return True, "La lista está vacía"
+    
+    primer_tipo = type(lista[0])
+    
+    for elemento in lista[1:]:
+        if type(elemento) != primer_tipo:
+            return False, f"Tipos mezclados encontrados. Primer tipo: {primer_tipo}, tipo diferente: {type(elemento)}"
+    
+    return True, f"Todos los elementos son de tipo: {primer_tipo.__name__}"
 
+lsttest = [True, False, 4]
+print(todos_mismo_tipo(lsttest))
 
 ##4. Write a function which check if provided variable is a valid python variable
 
 print('''Ejercicio 4 nivel 3:
-      
+      Escriba una función que verifique si la variable proporcionada es una variable de Python válida.
 ''')
 
+posiblevariablepy = input('Ingresa una posible variable para python: ')
+def valid_variablepy_simple(posiblevariablepy):
+    if not posiblevariablepy or " " in posiblevariablepy:
+        return False
+    if not (posiblevariablepy[0].isalpha() or posiblevariablepy[0] == '_'):
+        return False
+    return True
 
+print(valid_variablepy_simple(posiblevariablepy))
 
 ##5. Go to the data folder and access the countries-data.py file.
 
@@ -431,7 +494,39 @@ print('''Ejercicio 4 nivel 3:
 # It should return 10 or 20 most populated countries in descending order.
 
 print('''Ejercicio 5 nivel 3:
-      
+      Vaya a la carpeta de datos y acceda al archivo Countries-data.py.
+- Cree una función llamada "most_spoken_languages ​​in the world".
+- Debería devolver los 10 o 20 idiomas más hablados del mundo en orden descendente.
+- Cree una función llamada "most_populated_countries".
+- Debería devolver los 10 o 20 países más poblados en orden descendente.
 ''')
 
+import datosPais as datac 
+
+datos = datac.paises
+
+def most_spoken_languages():
+    countrylanguage = []
+    for pais in datos:
+        for lenguaje in pais['languages']:
+            countrylanguage.append(lenguaje)
+    setlanguages = set(countrylanguage)
+    dictlanguages = {}
+    for language in setlanguages:
+        dictlanguages[language] = 0
+
+    for idioma in dictlanguages:
+        for pais in datos:  
+            if idioma in pais['languages']:
+                dictlanguages[idioma] = pais['population'] + dictlanguages[idioma]
+    
+    sortValuesLanguagespopulation = sorted(dictlanguages.values(), reverse= True)
+    sorfkeyslanguagespopulation = sorted(dictlanguages, key= dictlanguages.get, reverse=True)
+    
+    print('Los 10 idiomas mas hablados en el mundo son (orden decendente)')
+    for i in range(20):
+        print(i+1, "-",sorfkeyslanguagespopulation[i] ,sortValuesLanguagespopulation[i])
+    return""
+
+print(most_spoken_languages())
 
