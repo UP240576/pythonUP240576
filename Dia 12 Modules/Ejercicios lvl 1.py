@@ -67,3 +67,4 @@ def rgb_color_gen():
     return(r, g, b)
 
 print(rgb_color_gen)
+print("revisado")

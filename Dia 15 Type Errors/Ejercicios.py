@@ -31,3 +31,6 @@ print(''' Ejemplo 6: key
 print(''' Ejempl 7: valor
       Es cuando le damos un valor como uno numerico a uno que es en realidad una str
 ''')
+
+
+print("revisado")

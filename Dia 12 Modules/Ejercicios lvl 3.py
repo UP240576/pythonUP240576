@@ -29,3 +29,4 @@ def unique_random_numbers():
     return random.sample(range(0, 10), 7)
 
 print("Numeros aleatorios randoms:", unique_random_numbers())
+print("revisado")
